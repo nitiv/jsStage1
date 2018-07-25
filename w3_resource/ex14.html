@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript function to retrieve all the values of an object's properties.</title>
+</head>
+<body>
+	<script>
+
+function all_values(obj) {
+    var k = _keys(obj);
+    var length = k.length;
+    var values = Array(length);
+    for (var i = 0; i < length; i++) {
+      values[i] = obj[k[i]];
+    }
+    return values;
+  }
+function _keys(obj) 
+ {
+    if (!isObject(obj)) return [];
+    if (Object.keys) return Object.keys(obj);
+    var k = [];
+    for (var key in obj) if (_.has(obj, key)) k.push(key);
+    return k;
+  }
+function isObject(obj)   
+{  
+    var type = typeof obj;  
+    return type === 'function' || type === 'object' && !!obj;  
+  } 
+alert(all_values({firstName:"john",lastName:"Doe",age:45}));
+
+
+	</script>
+
+</body>
+</html>

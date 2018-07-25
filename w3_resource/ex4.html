@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var library=[
+{
+	title:"The Da Vinci Code",
+	author:"Dan Brown",
+	readingStatus:true
+},
+{
+	title:"Origin",
+	author:"Dan Brown",
+	readingStatus:false
+}
+]
+for(var i=0;i<library.length;i++)
+{
+var book="'" +library[i].title+"'"+"by"+library[i].author;
+	if(library[i].readingStstus)
+	{
+	alert('already read'+book)
+	}
+	else
+	{
+	alert('you still need to read'+book);
+    }
+}
+</script>
+</body>
+</html>
+	

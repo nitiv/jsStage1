@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Volume of Cylinder</title>
+</head>
+<body>
+<script>
+function Cylinder(height,diameter)
+{
+	this.height=height
+	this.diameter=diameter;
+}
+Cylinder.prototype.Volume=function()
+{
+var radius=this.diameter/2;
+return this.height*radius*radius*Math.PI;
+
+};
+var cyl=new Cylinder(5,6);
+document.write("volume="+ cyl.Volume());
+</script>
+</body>
+</html>
