@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<p id="demo"></p>
+
+<script>
+function Person(first, last, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    
+}
+Person.prototype.nationality = "Indian";
+
+var myFather = new Person("John", "Doe", 50);
+document.write("My father is " + myFather.nationality); 
+</script>
+
+</body>
+</html>
